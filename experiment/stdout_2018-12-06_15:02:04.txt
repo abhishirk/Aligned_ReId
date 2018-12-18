@@ -1,0 +1,312 @@
+------------------------------------------------------------
+cfg.__dict__
+{'base_lr': 0.0002,
+ 'ckpt_file': 'experiment/ckpt.pth',
+ 'crop_prob': 0,
+ 'crop_ratio': 1,
+ 'dataset': 'market1501',
+ 'exp_decay_at_epoch': 76,
+ 'exp_dir': 'experiment',
+ 'g_loss_weight': 1.0,
+ 'global_margin': 0.3,
+ 'id_loss_weight': 0.0,
+ 'ids_per_batch': 32,
+ 'im_mean': [0.486, 0.459, 0.408],
+ 'im_std': [0.229, 0.224, 0.225],
+ 'ims_per_id': 4,
+ 'l_loss_weight': 0.0,
+ 'local_conv_out_channels': 128,
+ 'local_dist_own_hard_sample': False,
+ 'local_margin': 0.3,
+ 'log_steps': 10000000000.0,
+ 'log_to_file': True,
+ 'lr_decay_type': 'exp',
+ 'model_weight_file': 'model_weight.pth',
+ 'normalize_feature': False,
+ 'only_test': True,
+ 'prefetch_threads': 2,
+ 'resize_h_w': (256, 128),
+ 'resume': False,
+ 'run': 1,
+ 'scale_im': True,
+ 'seed': None,
+ 'staircase_decay_at_epochs': (101, 201),
+ 'staircase_decay_multiply_factor': 0.1,
+ 'stderr_file': 'experiment/stderr_2018-12-06_15:02:04.txt',
+ 'stdout_file': 'experiment/stdout_2018-12-06_15:02:04.txt',
+ 'sys_device_ids': (0,),
+ 'test_batch_size': 32,
+ 'test_final_batch': True,
+ 'test_mirror_type': None,
+ 'test_set_kwargs': {'batch_dims': 'NCHW',
+                     'batch_size': 32,
+                     'final_batch': True,
+                     'im_mean': [0.486, 0.459, 0.408],
+                     'im_std': [0.229, 0.224, 0.225],
+                     'mirror_type': None,
+                     'name': 'market1501',
+                     'num_prefetch_threads': 2,
+                     'part': 'test',
+                     'prng': <module 'numpy.random' from '/opt/miniconda3/envs/pytorch_env/lib/python2.7/site-packages/numpy/random/__init__.pyc'>,
+                     'resize_h_w': (256, 128),
+                     'scale': True,
+                     'shuffle': False},
+ 'test_shuffle': False,
+ 'total_epochs': 150,
+ 'train_final_batch': False,
+ 'train_mirror_type': 'random',
+ 'train_set_kwargs': {'batch_dims': 'NCHW',
+                      'crop_prob': 0,
+                      'crop_ratio': 1,
+                      'final_batch': False,
+                      'ids_per_batch': 32,
+                      'im_mean': [0.486, 0.459, 0.408],
+                      'im_std': [0.229, 0.224, 0.225],
+                      'ims_per_id': 4,
+                      'mirror_type': 'random',
+                      'name': 'market1501',
+                      'num_prefetch_threads': 2,
+                      'part': 'trainval',
+                      'prng': <module 'numpy.random' from '/opt/miniconda3/envs/pytorch_env/lib/python2.7/site-packages/numpy/random/__init__.pyc'>,
+                      'resize_h_w': (256, 128),
+                      'scale': True,
+                      'shuffle': True},
+ 'train_shuffle': True,
+ 'trainset_part': 'trainval',
+ 'weight_decay': 0.0005}
+------------------------------------------------------------
+----------------------------------------
+market1501 trainval set
+----------------------------------------
+NO. Images: 12936
+NO. IDs: 751
+----------------------------------------
+----------------------------------------
+market1501 test set
+----------------------------------------
+NO. Images: 31969
+NO. IDs: 751
+NO. Query Images: 3368
+NO. Gallery Images: 15913
+NO. Multi-query Images: 12688
+----------------------------------------
+Keys not found in source state_dict: 
+	 base.layer2.0.bn1.num_batches_tracked
+	 local_bn.num_batches_tracked
+	 base.layer4.1.bn3.num_batches_tracked
+	 base.layer4.0.bn1.num_batches_tracked
+	 base.layer3.5.bn1.num_batches_tracked
+	 base.layer3.2.bn2.num_batches_tracked
+	 base.layer1.0.bn1.num_batches_tracked
+	 base.layer1.1.bn2.num_batches_tracked
+	 base.bn1.num_batches_tracked
+	 base.layer3.1.bn3.num_batches_tracked
+	 base.layer2.0.bn3.num_batches_tracked
+	 base.layer2.0.downsample.1.num_batches_tracked
+	 base.layer4.0.bn2.num_batches_tracked
+	 base.layer2.2.bn3.num_batches_tracked
+	 base.layer3.4.bn2.num_batches_tracked
+	 base.layer3.4.bn3.num_batches_tracked
+	 base.layer1.0.bn3.num_batches_tracked
+	 base.layer1.1.bn1.num_batches_tracked
+	 base.layer4.0.bn3.num_batches_tracked
+	 base.layer1.1.bn3.num_batches_tracked
+	 base.layer3.0.bn3.num_batches_tracked
+	 base.layer2.3.bn1.num_batches_tracked
+	 base.layer3.2.bn3.num_batches_tracked
+	 base.layer3.0.bn2.num_batches_tracked
+	 base.layer4.2.bn3.num_batches_tracked
+	 base.layer2.2.bn1.num_batches_tracked
+	 base.layer3.5.bn2.num_batches_tracked
+	 base.layer3.0.downsample.1.num_batches_tracked
+	 base.layer3.0.bn1.num_batches_tracked
+	 base.layer3.1.bn2.num_batches_tracked
+	 base.layer2.3.bn2.num_batches_tracked
+	 base.layer3.5.bn3.num_batches_tracked
+	 base.layer3.3.bn3.num_batches_tracked
+	 base.layer1.0.bn2.num_batches_tracked
+	 base.layer1.2.bn3.num_batches_tracked
+	 base.layer2.0.bn2.num_batches_tracked
+	 base.layer4.2.bn2.num_batches_tracked
+	 base.layer4.1.bn2.num_batches_tracked
+	 base.layer2.1.bn2.num_batches_tracked
+	 base.layer3.2.bn1.num_batches_tracked
+	 base.layer1.2.bn1.num_batches_tracked
+	 base.layer1.2.bn2.num_batches_tracked
+	 base.layer2.2.bn2.num_batches_tracked
+	 base.layer3.1.bn1.num_batches_tracked
+	 base.layer4.1.bn1.num_batches_tracked
+	 base.layer3.4.bn1.num_batches_tracked
+	 base.layer1.0.downsample.1.num_batches_tracked
+	 base.layer2.1.bn3.num_batches_tracked
+	 base.layer3.3.bn2.num_batches_tracked
+	 base.layer3.3.bn1.num_batches_tracked
+	 base.layer2.3.bn3.num_batches_tracked
+	 base.layer4.2.bn1.num_batches_tracked
+	 base.layer4.0.downsample.1.num_batches_tracked
+	 base.layer2.1.bn1.num_batches_tracked
+Loaded model weights from model_weight.pth
+
+=========> Test on dataset:  <=========
+
+/home/developer/test_images/0167303.jpg
+/home/developer/test_images/0168001.jpg
+/home/developer/test_images/0166000.jpg
+/home/developer/test_images/0165702.jpg
+/home/developer/test_images/0073301.jpg
+/home/developer/test_images/0045300.jpg
+/home/developer/test_images/0166600.jpg
+/home/developer/test_images/0167800.jpg
+/home/developer/test_images/0090901.jpg
+/home/developer/test_images/0166503.jpg
+/home/developer/test_images/0167404.jpg
+/home/developer/test_images/0056001.jpg
+/home/developer/test_images/0074101.jpg
+/home/developer/test_images/0165704.jpg
+/home/developer/test_images/0048700.jpg
+/home/developer/test_images/0074402.jpg
+/home/developer/test_images/0166501.jpg
+/home/developer/test_images/0048100.jpg
+/home/developer/test_images/0035700.jpg
+/home/developer/test_images/0166004.jpg
+/home/developer/test_images/0167700.jpg
+/home/developer/test_images/0167604.jpg
+/home/developer/test_images/0020400.jpg
+/home/developer/test_images/0167103.jpg
+/home/developer/test_images/0167001.jpg
+/home/developer/test_images/0167901.jpg
+/home/developer/test_images/0079302.jpg
+/home/developer/test_images/0074302.jpg
+/home/developer/test_images/0166901.jpg
+/home/developer/test_images/0167802.jpg
+/home/developer/test_images/0167902.jpg
+/home/developer/test_images/0046101.jpg
+/home/developer/test_images/0089802.jpg
+/home/developer/test_images/0166302.jpg
+/home/developer/test_images/0166404.jpg
+/home/developer/test_images/0167803.jpg
+/home/developer/test_images/0167101.jpg
+/home/developer/test_images/0166902.jpg
+/home/developer/test_images/0166100.jpg
+/home/developer/test_images/0167801.jpg
+/home/developer/test_images/0166504.jpg
+/home/developer/test_images/0073601.jpg
+/home/developer/test_images/0167500.jpg
+/home/developer/test_images/0167202.jpg
+/home/developer/test_images/0165803.jpg
+/home/developer/test_images/0166502.jpg
+/home/developer/test_images/0167603.jpg
+/home/developer/test_images/0165801.jpg
+/home/developer/test_images/0166403.jpg
+/home/developer/test_images/0027200.jpg
+/home/developer/test_images/0073802.jpg
+/home/developer/test_images/0165804.jpg
+/home/developer/test_images/0166804.jpg
+/home/developer/test_images/0166500.jpg
+/home/developer/test_images/0166702.jpg
+/home/developer/test_images/0167301.jpg
+/home/developer/test_images/0166904.jpg
+/home/developer/test_images/0074602.jpg
+/home/developer/test_images/0167104.jpg
+/home/developer/test_images/0166401.jpg
+/home/developer/test_images/0074502.jpg
+/home/developer/test_images/0166201.jpg
+/home/developer/test_images/0168002.jpg
+/home/developer/test_images/0168000.jpg
+/home/developer/test_images/0166601.jpg
+/home/developer/test_images/0071901.jpg
+/home/developer/test_images/0166602.jpg
+/home/developer/test_images/0165904.jpg
+/home/developer/test_images/0166003.jpg
+/home/developer/test_images/0034000.jpg
+/home/developer/test_images/0074201.jpg
+/home/developer/test_images/0028900.jpg
+/home/developer/test_images/0018700.jpg
+/home/developer/test_images/0167703.jpg
+/home/developer/test_images/0090401.jpg
+/home/developer/test_images/0165802.jpg
+/home/developer/test_images/0072402.jpg
+/home/developer/test_images/0049501.jpg
+/home/developer/test_images/0167602.jpg
+/home/developer/test_images/0166903.jpg
+/home/developer/test_images/0167302.jpg
+/home/developer/test_images/0167403.jpg
+/home/developer/test_images/0047801.jpg
+/home/developer/test_images/0166400.jpg
+/home/developer/test_images/0166104.jpg
+/home/developer/test_images/0167504.jpg
+/home/developer/test_images/0074702.jpg
+/home/developer/test_images/0166203.jpg
+/home/developer/test_images/0023800.jpg
+/home/developer/test_images/0166202.jpg
+/home/developer/test_images/0022100.jpg
+/home/developer/test_images/0166204.jpg
+/home/developer/test_images/0166800.jpg
+/home/developer/test_images/0045201.jpg
+/home/developer/test_images/0167402.jpg
+/home/developer/test_images/0167900.jpg
+/home/developer/test_images/0166101.jpg
+/home/developer/test_images/0073401.jpg
+/home/developer/test_images/0165903.jpg
+/home/developer/test_images/0072301.jpg
+/home/developer/test_images/0047901.jpg
+/home/developer/test_images/0074802.jpg
+/home/developer/test_images/0165901.jpg
+/home/developer/test_images/0165800.jpg
+/home/developer/test_images/0167401.jpg
+/home/developer/test_images/0167203.jpg
+/home/developer/test_images/0048800.jpg
+/home/developer/test_images/0048000.jpg
+/home/developer/test_images/0167601.jpg
+/home/developer/test_images/0167600.jpg
+/home/developer/test_images/0165703.jpg
+/home/developer/test_images/0167004.jpg
+/home/developer/test_images/0047000.jpg
+/home/developer/test_images/0166604.jpg
+/home/developer/test_images/0166803.jpg
+/home/developer/test_images/0166900.jpg
+/home/developer/test_images/0167102.jpg
+/home/developer/test_images/0167000.jpg
+/home/developer/test_images/0073002.jpg
+/home/developer/test_images/0166200.jpg
+/home/developer/test_images/0089200.jpg
+/home/developer/test_images/0091001.jpg
+/home/developer/test_images/0166102.jpg
+/home/developer/test_images/0089300.jpg
+/home/developer/test_images/0167204.jpg
+/home/developer/test_images/0044500.jpg
+/home/developer/test_images/0079401.jpg
+/home/developer/test_images/0166802.jpg
+/home/developer/test_images/0055401.jpg
+/home/developer/test_images/0165900.jpg
+/home/developer/test_images/0167704.jpg
+/home/developer/test_images/0167200.jpg
+/home/developer/test_images/0032300.jpg
+/home/developer/test_images/0166703.jpg
+/home/developer/test_images/0167501.jpg
+/home/developer/test_images/0055301.jpg
+/home/developer/test_images/0166402.jpg
+/home/developer/test_images/0167201.jpg
+/home/developer/test_images/0165902.jpg
+/home/developer/test_images/0166603.jpg
+/home/developer/test_images/0075402.jpg
+/home/developer/test_images/0167100.jpg
+/home/developer/test_images/0167804.jpg
+/home/developer/test_images/0056901.jpg
+/home/developer/test_images/0025500.jpg
+/home/developer/test_images/0043501.jpg
+/home/developer/test_images/0166801.jpg
+/home/developer/test_images/0167503.jpg
+/home/developer/test_images/0167300.jpg
+/home/developer/test_images/0166704.jpg
+/home/developer/test_images/0165701.jpg
+/home/developer/test_images/0167904.jpg
+/home/developer/test_images/0030600.jpg
+/home/developer/test_images/0166103.jpg
+/home/developer/test_images/0167903.jpg
+/home/developer/test_images/0166300.jpg
+/home/developer/test_images/0071702.jpg
+/home/developer/test_images/0166301.jpg
+/home/developer/test_images/0167502.jpg
+(159, 3, 256, 128)
+(159, 3, 256, 128)

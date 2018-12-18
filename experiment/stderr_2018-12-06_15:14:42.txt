@@ -1,0 +1,16 @@
+./aligned_reid/model/Model.py:20: UserWarning: nn.init.normal is now deprecated in favor of nn.init.normal_.
+  init.normal(self.fc.weight, std=0.001)
+./aligned_reid/model/Model.py:21: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  init.constant(self.fc.bias, 0)
+Traceback (most recent call last):
+  File "script/experiment/train.py", line 637, in <module>
+    main()
+  File "script/experiment/train.py", line 394, in main
+    test(load_model_weight=True)
+  File "script/experiment/train.py", line 384, in test
+    inp.eval(normalize_feat=True, use_local_distance=use_local_distance)
+  File "/home/developer/Desktop/reid/AlignedReID-Re-Production-Pytorch-master/script/experiment/extract_feat_image.py", line 55, in eval
+    global_feats, local_feats = self.extract_feat(normalize_feat)
+  File "/home/developer/Desktop/reid/AlignedReID-Re-Production-Pytorch-master/script/experiment/extract_feat_image.py", line 114, in extract_feat
+    global_feats = normalize(0, axis=1)
+NameError: global name 'normalize' is not defined

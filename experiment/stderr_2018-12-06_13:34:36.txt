@@ -1,0 +1,27 @@
+Downloading: "https://download.pytorch.org/models/resnet50-19c8e357.pth" to /home/developer/.torch/models/resnet50-19c8e357.pth
+Traceback (most recent call last):
+  File "script/experiment/train.py", line 632, in <module>
+    main()
+  File "script/experiment/train.py", line 334, in main
+    num_classes=len(train_set.ids2labels))
+  File "./aligned_reid/model/Model.py", line 12, in __init__
+    self.base = resnet50(pretrained=True)
+  File "./aligned_reid/model/resnet.py", line 188, in resnet50
+    model.load_state_dict(remove_fc(model_zoo.load_url(model_urls['resnet50'])))
+  File "/opt/miniconda3/envs/pytorch_env/lib/python2.7/site-packages/torch/utils/model_zoo.py", line 65, in load_url
+    _download_url_to_file(url, cached_file, hash_prefix, progress=progress)
+  File "/opt/miniconda3/envs/pytorch_env/lib/python2.7/site-packages/torch/utils/model_zoo.py", line 75, in _download_url_to_file
+    u = urlopen(url)
+  File "/opt/miniconda3/envs/pytorch_env/lib/python2.7/urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "/opt/miniconda3/envs/pytorch_env/lib/python2.7/urllib2.py", line 429, in open
+    response = self._open(req, data)
+  File "/opt/miniconda3/envs/pytorch_env/lib/python2.7/urllib2.py", line 447, in _open
+    '_open', req)
+  File "/opt/miniconda3/envs/pytorch_env/lib/python2.7/urllib2.py", line 407, in _call_chain
+    result = func(*args)
+  File "/opt/miniconda3/envs/pytorch_env/lib/python2.7/urllib2.py", line 1241, in https_open
+    context=self._context)
+  File "/opt/miniconda3/envs/pytorch_env/lib/python2.7/urllib2.py", line 1198, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:726)>

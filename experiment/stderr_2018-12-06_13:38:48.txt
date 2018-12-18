@@ -1,0 +1,6 @@
+./aligned_reid/model/Model.py:20: UserWarning: nn.init.normal is now deprecated in favor of nn.init.normal_.
+  init.normal(self.fc.weight, std=0.001)
+./aligned_reid/model/Model.py:21: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  init.constant(self.fc.bias, 0)
+./aligned_reid/utils/distance.py:35: RuntimeWarning: invalid value encountered in sqrt
+  dist = np.sqrt(squared_dist)

@@ -1,0 +1,14 @@
+/home/developer/Desktop/reid/AlignedReID-Re-Production-Pytorch-master/aligned_reid/model/Model.py:20: UserWarning: nn.init.normal is now deprecated in favor of nn.init.normal_.
+  init.normal(self.fc.weight, std=0.001)
+/home/developer/Desktop/reid/AlignedReID-Re-Production-Pytorch-master/aligned_reid/model/Model.py:21: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  init.constant(self.fc.bias, 0)
+Traceback (most recent call last):
+  File "/home/developer/Desktop/reid/AlignedReID-Re-Production-Pytorch-master/script/experiment/train.py", line 991, in <module>
+    main()
+  File "/home/developer/Desktop/reid/AlignedReID-Re-Production-Pytorch-master/script/experiment/train.py", line 395, in main
+    test(load_model_weight=True)
+  File "/home/developer/Desktop/reid/AlignedReID-Re-Production-Pytorch-master/script/experiment/train.py", line 374, in test
+    sd = torch.load(cfg.model_weight_file, map_location=map_location)
+  File "/opt/miniconda3/envs/pytorch_env/lib/python2.7/site-packages/torch/serialization.py", line 356, in load
+    f = open(f, 'rb')
+IOError: [Errno 2] No such file or directory: 'model_weight.pth'

@@ -1,0 +1,36 @@
+./aligned_reid/model/Model.py:20: UserWarning: nn.init.normal is now deprecated in favor of nn.init.normal_.
+  init.normal(self.fc.weight, std=0.001)
+./aligned_reid/model/Model.py:21: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  init.constant(self.fc.bias, 0)
+Traceback (most recent call last):
+  File "script/experiment/call_main.py", line 14, in <module>
+    main()
+  File "script/experiment/call_main.py", line 9, in main
+    global_feats, local_feats = main_2(stacked_images)
+  File "/home/developer/Desktop/reid/AlignedReID-Re-Production-Pytorch-master/script/experiment/train.py", line 747, in main_2
+    return test(load_model_weight=True)
+  File "/home/developer/Desktop/reid/AlignedReID-Re-Production-Pytorch-master/script/experiment/train.py", line 737, in test
+    return inp.eval(ims,normalize_feat=True, use_local_distance=use_local_distance)
+  File "/home/developer/Desktop/reid/AlignedReID-Re-Production-Pytorch-master/script/experiment/extract_feat_image.py", line 55, in eval
+    return self.extract_feat(normalize_feat,stacked_imgs)
+  File "/home/developer/Desktop/reid/AlignedReID-Re-Production-Pytorch-master/script/experiment/extract_feat_image.py", line 93, in extract_feat
+    global_feat, local_feat = self.extract_feat_func(ims_)
+  File "/home/developer/Desktop/reid/AlignedReID-Re-Production-Pytorch-master/script/experiment/train.py", line 282, in __call__
+    global_feat, local_feat = self.model(ims)[:2]
+  File "/opt/miniconda3/envs/pytorch_env/lib/python2.7/site-packages/torch/nn/modules/module.py", line 477, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/miniconda3/envs/pytorch_env/lib/python2.7/site-packages/torch/nn/parallel/data_parallel.py", line 121, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/opt/miniconda3/envs/pytorch_env/lib/python2.7/site-packages/torch/nn/modules/module.py", line 477, in __call__
+    result = self.forward(*input, **kwargs)
+  File "./aligned_reid/model/Model.py", line 30, in forward
+    feat = self.base(x)
+  File "/opt/miniconda3/envs/pytorch_env/lib/python2.7/site-packages/torch/nn/modules/module.py", line 477, in __call__
+    result = self.forward(*input, **kwargs)
+  File "./aligned_reid/model/resnet.py", line 135, in forward
+    x = self.conv1(x)
+  File "/opt/miniconda3/envs/pytorch_env/lib/python2.7/site-packages/torch/nn/modules/module.py", line 477, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/miniconda3/envs/pytorch_env/lib/python2.7/site-packages/torch/nn/modules/conv.py", line 301, in forward
+    self.padding, self.dilation, self.groups)
+RuntimeError: Expected 4-dimensional input for 4-dimensional weight [64, 3, 7, 7], but got input of size [128, 256, 128] instead

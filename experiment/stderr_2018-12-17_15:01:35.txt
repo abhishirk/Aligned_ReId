@@ -1,0 +1,14 @@
+./aligned_reid/model/Model.py:20: UserWarning: nn.init.normal is now deprecated in favor of nn.init.normal_.
+  init.normal(self.fc.weight, std=0.001)
+./aligned_reid/model/Model.py:21: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  init.constant(self.fc.bias, 0)
+Traceback (most recent call last):
+  File "script/experiment/call_main.py", line 14, in <module>
+    main()
+  File "script/experiment/call_main.py", line 9, in main
+    global_feats, local_feats = main_2(stacked_images)
+  File "/home/developer/Desktop/reid/AlignedReID-Re-Production-Pytorch-master/script/experiment/train.py", line 747, in main_2
+    return test(load_model_weight=True)
+  File "/home/developer/Desktop/reid/AlignedReID-Re-Production-Pytorch-master/script/experiment/train.py", line 734, in test
+    im, _ = ppi.pre_process_im(im)
+UnboundLocalError: local variable 'im' referenced before assignment

@@ -1,0 +1,20 @@
+./aligned_reid/model/Model.py:20: UserWarning: nn.init.normal is now deprecated in favor of nn.init.normal_.
+  init.normal(self.fc.weight, std=0.001)
+./aligned_reid/model/Model.py:21: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  init.constant(self.fc.bias, 0)
+Traceback (most recent call last):
+  File "script/experiment/train.py", line 637, in <module>
+    main()
+  File "script/experiment/train.py", line 394, in main
+    test(load_model_weight=True)
+  File "script/experiment/train.py", line 384, in test
+    inp.eval(normalize_feat=True, use_local_distance=use_local_distance)
+  File "/home/developer/Desktop/reid/AlignedReID-Re-Production-Pytorch-master/script/experiment/extract_feat_image.py", line 54, in eval
+    global_feats, local_feats = self.extract_feat(normalize_feat)
+  File "/home/developer/Desktop/reid/AlignedReID-Re-Production-Pytorch-master/script/experiment/extract_feat_image.py", line 113, in extract_feat
+    global_feats = normalize(0, axis=1)
+  File "/home/developer/Desktop/reid/AlignedReID-Re-Production-Pytorch-master/script/experiment/distance.py", line 9, in normalize
+    norm = np.linalg.norm(nparray, ord=order, axis=axis, keepdims=True)
+  File "/opt/miniconda3/envs/pytorch_env/lib/python2.7/site-packages/numpy/linalg/linalg.py", line 2390, in norm
+    return sqrt(add.reduce(s, axis=axis, keepdims=keepdims))
+numpy.core._internal.AxisError: axis 1 is out of bounds for array of dimension 0
